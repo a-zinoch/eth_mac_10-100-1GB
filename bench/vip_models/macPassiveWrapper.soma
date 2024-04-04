@@ -1,0 +1,2628 @@
+<!--
+======================================================================
+Copyright 1999-2011 by Denali Software, Inc.  All rights reserved.
+======================================================================
+
+This SOMA file describes a memory model, using Denali Software's
+proprietary SOMA language.  By using this SOMA file, you agree to the
+following terms.  If you do not agree to these terms, you may not use
+this SOMA file.
+
+Subject to the restrictions set forth below, Denali Software grants
+you a non-exclusive, non-transferable license only to use this SOMA
+file to simulate the memory described in it using tools supplied by
+Denali Software.
+
+You may not:
+
+  (1)  Use this SOMA file to create software programs or tools that use
+       SOMA files as either input or output.
+
+  (2)  Modify this SOMA file or the SOMA language in any manner.
+
+  (3)  Use this SOMA file to create other languages for describing
+       memory models.
+
+  (4)  Distribute this SOMA file to others.
+
+This SOMA file is based on information received by Denali Software
+from third parties.  DENALI SOFTWARE PROVIDES THIS SOMA FILE "AS IS"
+AND EXPRESSLY DISCLAIMS ALL REPRESENTATIONS, WARRANTIES AND
+CONDITIONS, INCLUDING BUT NOT LIMITED TO WARRANTIES AND CONDITIONS OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND
+NONINFRINGEMENT.  DENALI SOFTWARE'S AGGREGATE LIABILITY ARISING FROM
+YOUR USE OF THIS SOMA FILE IS LIMITED TO ONE U.S. DOLLAR.
+
+If you have any questions or if you would like to inquire about
+obtaining additional or different rights in SOMA files or the SOMA
+language, please contact Denali Software, at www.denali.com or at
+info@denali.com.
+
+Written on 26 Sep 2011
+PureView version: 3.3.013  $DENALI: /dv/project/vipp11/cat/test/install/install/tools/denali
+-->
+<soma>
+  <part>
+    <summary>
+      <class>enet</class>
+      <tool name="PureView" version="3.3.013" path="/dv/project/vipp11/cat/test/install/install/tools/denali" />
+      <tool name="PureView" version="3.3.013" path="/dv/project/vipp11/cat/test/install/install/tools/denali" />
+      <tool name="PureView" version="3.3.026" path="/home/soft/vip13/tools/denali_64bit" />
+      <tool name="PureView" version="3.3.026" path="/home/soft/vip13/tools/denali_64bit" />
+      <tool name="PureView" version="3.3.026" path="/home/soft/vip13/tools/denali_64bit" />
+    </summary>
+    <functionality>
+      <feature name="DeviceMode" origin="user">
+        <value>0</value>
+      </feature>
+      <feature name="MonitorMode" origin="user">
+        <value>1</value>
+      </feature>
+      <feature name="cl73_mr_adv_ability" origin="default">
+        <value>16811009</value>
+      </feature>
+      <feature name="cl73_mr_autoneg_enable" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="has_reset" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="active_high_reset" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="duplex_kind" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="duplex_kind_HALF" origin="user">
+        <value>1</value>
+      </feature>
+      <feature name="duplex_kind_FULL" origin="user">
+        <value>0</value>
+      </feature>
+      <feature name="clear_pkts_on_reset" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pma_mux_lanes" origin="default">
+        <value>4</value>
+      </feature>
+      <feature name="has_alignment" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="vr_enet_pma_lane_bus_width" origin="default">
+        <value>66</value>
+      </feature>
+      <feature name="do_bit_reverse_clause_51" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="has_fec_layer" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="mr_unidirectional_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="stop_clock_en" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lpi_clk_stop_delay" origin="default">
+        <value>128</value>
+      </feature>
+      <feature name="signal_order_set_pattern" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="has_scramble" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="has_prbs31_test_pattern_ability" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="prbs31_transmit_test_pattern_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="prbs31_receive_test_pattern_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="square_wave_pattern_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="tx_scrambled_idles_test_pattern" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="rx_scrambled_idles_test_pattern" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="has_prbs_test_pattern_ability" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="prbs_transmit_test_pattern_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="prbs_receive_test_pattern_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="device_address" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="assign_dynamic_addr" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="station_address" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="retry_limit" origin="default">
+        <value>16</value>
+      </feature>
+      <feature name="stop_retransmit_on_late_col" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="jam_length" origin="default">
+        <value>8</value>
+      </feature>
+      <feature name="crs_active_in_full_duplex" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="pause_enable" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="pfc_pause_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="burst_mode_on" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="sync_drive_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="fault_signaling_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="retransmission_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="link_timer_count" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="min_tag_framesize_64" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="mr_adv_ability" origin="default">
+        <value>224</value>
+      </feature>
+      <feature name="mr_an_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern_0" origin="default">
+        <value>13959058155914098320</value>
+      </feature>
+      <feature name="lane_pattern_1" origin="default">
+        <value>11248086481621140720</value>
+      </feature>
+      <feature name="lane_pattern_2" origin="default">
+        <value>14728066256172967365</value>
+      </feature>
+      <feature name="lane_pattern_3" origin="default">
+        <value>2865000050579044770</value>
+      </feature>
+      <feature name="lane_pattern_4" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern_5" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern_6" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern_7" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern_8" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern_9" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern_10" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern_11" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern_12" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern_13" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern_14" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern_15" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern_16" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern_17" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern_18" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lane_pattern_19" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_count" origin="default">
+        <value>1200</value>
+      </feature>
+      <feature name="allowable_skew" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="wait_for_monitor_status_ok" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="has_custom_preamble" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="custom_preamble_size" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="use_custom_preamble_in_crc" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="use_sop_in_crc" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="scoreboard_custom_preamble" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="has_custom_message" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="custom_message_start_character" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="custom_message_size" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inter_custom_message_gap" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="T_w_sys_rx" origin="default">
+        <value>400</value>
+      </feature>
+      <feature name="T_w_sys_tx" origin="default">
+        <value>400</value>
+      </feature>
+      <feature name="T_sl" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="T_ql" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="T_ul" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="T_wl" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="T_wtf" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="T_qr" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="T_wr" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="disable_fcs" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lpi_rx_clk_stp" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lpi_rx_clk_stp_clk_offset" origin="default">
+        <value>10</value>
+      </feature>
+      <feature name="lpi_tx_clk_stp" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lpi_tx_clk_stp_clk_offset" origin="default">
+        <value>10</value>
+      </feature>
+      <feature name="fec_enable" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="slack_counter" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="clock_health_mon_cnt" origin="default">
+        <value>5</value>
+      </feature>
+      <feature name="injection_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="ref_time_out" origin="default">
+        <value>5</value>
+      </feature>
+      <feature name="continuous_mon_clk_health" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="mr_training_enable" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="max_wait_time_divide_by" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="frame_count_train_local" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="training_attempt" origin="default">
+        <value>3</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_0" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_1" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_2" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_3" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_4" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_5" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_6" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_7" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_8" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_9" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_10" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_11" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_12" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_13" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_14" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_15" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_16" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_17" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_18" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_mr_training_enable_19" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_0" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_1" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_2" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_3" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_4" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_5" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_6" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_7" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_8" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_9" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_10" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_11" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_12" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_13" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_14" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_15" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_16" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_17" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_18" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_max_wait_time_divide_by_19" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_0" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_1" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_2" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_3" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_4" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_5" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_6" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_7" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_8" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_9" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_10" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_11" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_12" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_13" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_14" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_15" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_16" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_17" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_18" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_tx_coeff_update_19" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_0" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_1" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_2" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_3" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_4" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_5" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_6" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_7" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_8" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_9" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_10" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_11" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_12" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_13" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_14" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_15" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_16" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_17" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_18" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_pmd_lane_tx_coeff_19" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_0" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_1" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_2" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_3" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_4" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_5" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_6" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_7" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_8" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_9" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_10" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_11" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_12" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_13" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_14" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_15" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_16" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_17" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_18" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_wait_time_19" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_0" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_1" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_2" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_3" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_4" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_5" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_6" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_7" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_8" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_9" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_10" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_11" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_12" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_13" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_14" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_15" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_16" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_17" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_18" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_frame_count_train_local_19" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cg_100gbaser_training_attempt" origin="default">
+        <value>3</value>
+      </feature>
+      <feature name="interface_kind" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_MII" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="interface_kind_GMII" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_RMII" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_XGMII" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_XAUI" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_TBI" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_RTBI" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_SMII" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_SGMII" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_XSBI" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_ONEGKX" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_TENGKX4" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_TENGKR" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_CG_100GBASER" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_RGMII" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_CGMII" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_MII_100BASEX" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="speed_mode" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="speed_mode_SPEED_MODE_10MBPS" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="speed_mode_SPEED_MODE_100MBPS" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="speed_mode_SPEED_MODE_1GBPS" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="speed_mode_SPEED_MODE_10GBPS" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="speed_mode_SPEED_MODE_40GBPS" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="speed_mode_SPEED_MODE_100GBPS" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="agent_kind" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="agent_kind_MAC" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="agent_kind_PHY" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="has_scoreboard" origin="user">
+        <value>1</value>
+      </feature>
+      <feature name="has_mgmt" origin="user">
+        <value>1</value>
+      </feature>
+      <feature name="has_EEE" origin="user">
+        <value>1</value>
+      </feature>
+      <feature name="has_pmd_training" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="has_clk_data_recovery" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="has_clock_health_monitor" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="sub_layer_kind" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="sub_layer_kind_PCS_LAYER" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="sub_layer_kind_PMA_LAYER" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="station_kind" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="station_kind_TX_STATION" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="station_kind_RX_STATION" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="half_cycle_clock" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_0" origin="default">
+        <value>13959058155914098320</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_1" origin="default">
+        <value>11248086481621140720</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_2" origin="default">
+        <value>14728066256172967365</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_3" origin="default">
+        <value>2865000050579044770</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_4" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_5" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_6" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_7" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_8" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_9" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_10" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_11" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_12" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_13" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_14" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_15" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_16" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_17" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_18" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_am_lane_order_19" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_0" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_1" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_2" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_3" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_4" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_5" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_6" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_7" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_8" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_9" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_10" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_11" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_12" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_13" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_14" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_15" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_16" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_17" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_18" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="inject_skew_19" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="internal_signal_detect_toggle" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="FEC_Enable_Error_to_PCS" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="FEC_Error_Indication_ability" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="interface_width" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_width_SERIAL_BUS_WIDTH_INTERFACE" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="interface_width_PMA_BUS_WIDTH_INTERFACE" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="pfc_transmitted_delay" origin="default">
+        <value>6144</value>
+      </feature>
+      <feature name="pfc_received_delay" origin="default">
+        <value>6144</value>
+      </feature>
+      <feature name="macsec" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="has_cl73_an" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="multi_phyad_support" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="valid_phyad" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="CONTINUOUS_MDC" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="mgmt_clk_mode" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="mgmt_clk_mode_EXTERNAL_MDC" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="mgmt_clk_mode_INTERNAL_MDC" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="enable_run_time_speed_change" origin="default">
+        <value>0</value>
+      </feature>
+      <pin name="sig_MII_CRS" origin="default">
+        <username>sig_MII_CRS</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_MII_RX_DV" origin="default">
+        <username>sig_MII_RX_DV</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_MII_TX_DATA" origin="default">
+        <username>sig_MII_TX_DATA</username>
+        <bits>4</bits>
+      </pin>
+      <pin name="sig_MII_RX_DATA" origin="default">
+        <username>sig_MII_RX_DATA</username>
+        <bits>4</bits>
+      </pin>
+      <pin name="sig_MII_RX_ER" origin="default">
+        <username>sig_MII_RX_ER</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_MII_TX_ER" origin="default">
+        <username>sig_MII_TX_ER</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_MII_COL" origin="default">
+        <username>sig_MII_COL</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_MII_TX_EN" origin="default">
+        <username>sig_MII_TX_EN</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_MII_TX_CLK" origin="default">
+        <username>sig_MII_TX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_MII_RX_CLK" origin="default">
+        <username>sig_MII_RX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_MDIO" origin="default">
+        <username>sig_MDIO</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_MDCLK" origin="default">
+        <username>sig_MDCLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RMII_TX_EN" origin="default">
+        <username>sig_RMII_TX_EN</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RMII_TX_DATA" origin="default">
+        <username>sig_RMII_TX_DATA</username>
+        <bits>2</bits>
+      </pin>
+      <pin name="sig_RMII_CRS_DV" origin="default">
+        <username>sig_RMII_CRS_DV</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RMII_RX_DATA" origin="default">
+        <username>sig_RMII_RX_DATA</username>
+        <bits>2</bits>
+      </pin>
+      <pin name="sig_RMII_RX_ER" origin="default">
+        <username>sig_RMII_RX_ER</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RMII_REF_CLK" origin="default">
+        <username>sig_RMII_REF_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_SMII_TX" origin="default">
+        <username>sig_SMII_TX</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_SMII_RX" origin="default">
+        <username>sig_SMII_RX</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_SMII_REF_CLK" origin="default">
+        <username>sig_SMII_REF_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_SMII_SYNC" origin="default">
+        <username>sig_SMII_SYNC</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_GMII_CRS" origin="default">
+        <username>sig_GMII_CRS</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_GMII_RX_DV" origin="default">
+        <username>sig_GMII_RX_DV</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_GMII_TX_DATA" origin="default">
+        <username>sig_GMII_TX_DATA</username>
+        <bits>8</bits>
+      </pin>
+      <pin name="sig_GMII_RX_DATA" origin="default">
+        <username>sig_GMII_RX_DATA</username>
+        <bits>8</bits>
+      </pin>
+      <pin name="sig_GMII_RX_ER" origin="default">
+        <username>sig_GMII_RX_ER</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_GMII_TX_ER" origin="default">
+        <username>sig_GMII_TX_ER</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_GMII_COL" origin="default">
+        <username>sig_GMII_COL</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_GMII_TX_EN" origin="default">
+        <username>sig_GMII_TX_EN</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_GMII_TX_CLK" origin="default">
+        <username>sig_GMII_TX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_GMII_RX_CLK" origin="default">
+        <username>sig_GMII_RX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TBI_PMA_TX_CLK" origin="default">
+        <username>sig_TBI_PMA_TX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TBI_RX_CODE" origin="default">
+        <username>sig_TBI_RX_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_TBI_TX_CODE" origin="default">
+        <username>sig_TBI_TX_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_TBI_EN_WRAP" origin="default">
+        <username>sig_TBI_EN_WRAP</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TBI_PMA_RX_CLK0" origin="default">
+        <username>sig_TBI_PMA_RX_CLK0</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TBI_PMA_RX_CLK1" origin="default">
+        <username>sig_TBI_PMA_RX_CLK1</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TBI_EN_CDET" origin="default">
+        <username>sig_TBI_EN_CDET</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TBI_COM_DET" origin="default">
+        <username>sig_TBI_COM_DET</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TBI_LCK_REF" origin="default">
+        <username>sig_TBI_LCK_REF</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TBI_SIGNAL_DETECT" origin="default">
+        <username>sig_TBI_SIGNAL_DETECT</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RTBI_TXC" origin="default">
+        <username>sig_RTBI_TXC</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RTBI_RXC" origin="default">
+        <username>sig_RTBI_RXC</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RTBI_TD" origin="default">
+        <username>sig_RTBI_TD</username>
+        <bits>4</bits>
+      </pin>
+      <pin name="sig_RTBI_TX_CTL" origin="default">
+        <username>sig_RTBI_TX_CTL</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RTBI_RD" origin="default">
+        <username>sig_RTBI_RD</username>
+        <bits>4</bits>
+      </pin>
+      <pin name="sig_RTBI_RX_CTL" origin="default">
+        <username>sig_RTBI_RX_CTL</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_ONEGKX_TX_CLK" origin="default">
+        <username>sig_ONEGKX_TX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_ONEGKX_RX_CLK" origin="default">
+        <username>sig_ONEGKX_RX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_ONEGKX_RXD_P" origin="default">
+        <username>sig_ONEGKX_RXD_P</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_ONEGKX_RXD_N" origin="default">
+        <username>sig_ONEGKX_RXD_N</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_ONEGKX_TXD_P" origin="default">
+        <username>sig_ONEGKX_TXD_P</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_ONEGKX_TXD_N" origin="default">
+        <username>sig_ONEGKX_TXD_N</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_ONEGKX_PMD_SIGNAL_DETECT" origin="default">
+        <username>sig_ONEGKX_PMD_SIGNAL_DETECT</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_SGMII_TXD" origin="default">
+        <username>sig_SGMII_TXD</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_SGMII_RXD" origin="default">
+        <username>sig_SGMII_RXD</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_SGMII_SERIAL_TX_CLK" origin="default">
+        <username>sig_SGMII_SERIAL_TX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_SGMII_SERIAL_RX_CLK" origin="default">
+        <username>sig_SGMII_SERIAL_RX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_SGMII_SIGNAL_DETECT" origin="default">
+        <username>sig_SGMII_SIGNAL_DETECT</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RGMII_TXC" origin="default">
+        <username>sig_RGMII_TXC</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RGMII_TD" origin="default">
+        <username>sig_RGMII_TD</username>
+        <bits>4</bits>
+      </pin>
+      <pin name="sig_RGMII_TX_CTL" origin="default">
+        <username>sig_RGMII_TX_CTL</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RGMII_RXC" origin="default">
+        <username>sig_RGMII_RXC</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RGMII_RD" origin="default">
+        <username>sig_RGMII_RD</username>
+        <bits>4</bits>
+      </pin>
+      <pin name="sig_RGMII_RX_CTL" origin="default">
+        <username>sig_RGMII_RX_CTL</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_XGMII_TXC" origin="default">
+        <username>sig_XGMII_TXC</username>
+        <bits>4</bits>
+      </pin>
+      <pin name="sig_XGMII_TX_DATA" origin="default">
+        <username>sig_XGMII_TX_DATA</username>
+        <bits>32</bits>
+      </pin>
+      <pin name="sig_XGMII_RXC" origin="default">
+        <username>sig_XGMII_RXC</username>
+        <bits>4</bits>
+      </pin>
+      <pin name="sig_XGMII_RX_DATA" origin="default">
+        <username>sig_XGMII_RX_DATA</username>
+        <bits>32</bits>
+      </pin>
+      <pin name="sig_XGMII_TX_CLK" origin="default">
+        <username>sig_XGMII_TX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_XGMII_RX_CLK" origin="default">
+        <username>sig_XGMII_RX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKR_RX_CLK" origin="default">
+        <username>sig_TENGKR_RX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKR_TX_CLK" origin="default">
+        <username>sig_TENGKR_TX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKR_TXD_P" origin="default">
+        <username>sig_TENGKR_TXD_P</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKR_TXD_N" origin="default">
+        <username>sig_TENGKR_TXD_N</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKR_RXD_P" origin="default">
+        <username>sig_TENGKR_RXD_P</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKR_RXD_N" origin="default">
+        <username>sig_TENGKR_RXD_N</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKR_ENCODER_IN" origin="default">
+        <username>sig_TENGKR_ENCODER_IN</username>
+        <bits>72</bits>
+      </pin>
+      <pin name="sig_TENGKR_ENCODER_OUT" origin="default">
+        <username>sig_TENGKR_ENCODER_OUT</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_TENGKR_DECODER_IN" origin="default">
+        <username>sig_TENGKR_DECODER_IN</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_TENGKR_DECODER_NEXT_IN" origin="default">
+        <username>sig_TENGKR_DECODER_NEXT_IN</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_TENGKR_DECODER_OUT" origin="default">
+        <username>sig_TENGKR_DECODER_OUT</username>
+        <bits>72</bits>
+      </pin>
+      <pin name="sig_TENGKR_PCS_PMA_TXD" origin="default">
+        <username>sig_TENGKR_PCS_PMA_TXD</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_TENGKR_PCS_PMA_RXD" origin="default">
+        <username>sig_TENGKR_PCS_PMA_RXD</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_TENGKR_PMD_SIGNAL_DETECT" origin="default">
+        <username>sig_TENGKR_PMD_SIGNAL_DETECT</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKR_ENERGY_DETECT" origin="default">
+        <username>sig_TENGKR_ENERGY_DETECT</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX_CLK" origin="default">
+        <username>sig_TENGKX4_TX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX_CLK" origin="default">
+        <username>sig_TENGKX4_RX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX0_P" origin="default">
+        <username>sig_TENGKX4_TX0_P</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX0_N" origin="default">
+        <username>sig_TENGKX4_TX0_N</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX1_P" origin="default">
+        <username>sig_TENGKX4_TX1_P</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX1_N" origin="default">
+        <username>sig_TENGKX4_TX1_N</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX2_P" origin="default">
+        <username>sig_TENGKX4_TX2_P</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX2_N" origin="default">
+        <username>sig_TENGKX4_TX2_N</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX3_P" origin="default">
+        <username>sig_TENGKX4_TX3_P</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX3_N" origin="default">
+        <username>sig_TENGKX4_TX3_N</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX0_P" origin="default">
+        <username>sig_TENGKX4_RX0_P</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX0_N" origin="default">
+        <username>sig_TENGKX4_RX0_N</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX1_P" origin="default">
+        <username>sig_TENGKX4_RX1_P</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX1_N" origin="default">
+        <username>sig_TENGKX4_RX1_N</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX2_P" origin="default">
+        <username>sig_TENGKX4_RX2_P</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX2_N" origin="default">
+        <username>sig_TENGKX4_RX2_N</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX3_P" origin="default">
+        <username>sig_TENGKX4_RX3_P</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX3_N" origin="default">
+        <username>sig_TENGKX4_RX3_N</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX0_CODE" origin="default">
+        <username>sig_TENGKX4_TX0_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX1_CODE" origin="default">
+        <username>sig_TENGKX4_TX1_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX2_CODE" origin="default">
+        <username>sig_TENGKX4_TX2_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX3_CODE" origin="default">
+        <username>sig_TENGKX4_TX3_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX0_CODE" origin="default">
+        <username>sig_TENGKX4_RX0_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX1_CODE" origin="default">
+        <username>sig_TENGKX4_RX1_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX2_CODE" origin="default">
+        <username>sig_TENGKX4_RX2_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX3_CODE" origin="default">
+        <username>sig_TENGKX4_RX3_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_TENGKX4_PMD_SIGNAL_DETECT" origin="default">
+        <username>sig_TENGKX4_PMD_SIGNAL_DETECT</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_XSBI_RXD" origin="default">
+        <username>sig_XSBI_RXD</username>
+        <bits>16</bits>
+      </pin>
+      <pin name="sig_XSBI_TXD" origin="default">
+        <username>sig_XSBI_TXD</username>
+        <bits>16</bits>
+      </pin>
+      <pin name="sig_XSBI_SIGNAL_INDICATE" origin="default">
+        <username>sig_XSBI_SIGNAL_INDICATE</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_XSBI_PCS_R_STATUS" origin="default">
+        <username>sig_XSBI_PCS_R_STATUS</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK" origin="default">
+        <username>sig_PMA_RX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK" origin="default">
+        <username>sig_PMA_TX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_XSBI_ENCODER_IN" origin="default">
+        <username>sig_XSBI_ENCODER_IN</username>
+        <bits>72</bits>
+      </pin>
+      <pin name="sig_XSBI_ENCODER_OUT" origin="default">
+        <username>sig_XSBI_ENCODER_OUT</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_XSBI_DECODER_IN" origin="default">
+        <username>sig_XSBI_DECODER_IN</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_XSBI_DECODER_NEXT_IN" origin="default">
+        <username>sig_XSBI_DECODER_NEXT_IN</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_XSBI_DECODER_OUT" origin="default">
+        <username>sig_XSBI_DECODER_OUT</username>
+        <bits>72</bits>
+      </pin>
+      <pin name="sig_XSBI_ENERGY_DETECT" origin="default">
+        <username>sig_XSBI_ENERGY_DETECT</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_XAUI_TX_CLK" origin="default">
+        <username>sig_XAUI_TX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_XAUI_RX_CLK" origin="default">
+        <username>sig_XAUI_RX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_XAUI_TX0" origin="default">
+        <username>sig_XAUI_TX0</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_XAUI_TX1" origin="default">
+        <username>sig_XAUI_TX1</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_XAUI_TX2" origin="default">
+        <username>sig_XAUI_TX2</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_XAUI_TX3" origin="default">
+        <username>sig_XAUI_TX3</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_XAUI_RX0" origin="default">
+        <username>sig_XAUI_RX0</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_XAUI_RX1" origin="default">
+        <username>sig_XAUI_RX1</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_XAUI_RX2" origin="default">
+        <username>sig_XAUI_RX2</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_XAUI_RX3" origin="default">
+        <username>sig_XAUI_RX3</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_XAUI_TX0_CODE" origin="default">
+        <username>sig_XAUI_TX0_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_XAUI_TX1_CODE" origin="default">
+        <username>sig_XAUI_TX1_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_XAUI_TX2_CODE" origin="default">
+        <username>sig_XAUI_TX2_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_XAUI_TX3_CODE" origin="default">
+        <username>sig_XAUI_TX3_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_XAUI_RX0_CODE" origin="default">
+        <username>sig_XAUI_RX0_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_XAUI_RX1_CODE" origin="default">
+        <username>sig_XAUI_RX1_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_XAUI_RX2_CODE" origin="default">
+        <username>sig_XAUI_RX2_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_XAUI_RX3_CODE" origin="default">
+        <username>sig_XAUI_RX3_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_XAUI_SIGNAL_DETECT" origin="default">
+        <username>sig_XAUI_SIGNAL_DETECT</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_CGMII_TXC" origin="default">
+        <username>sig_CGMII_TXC</username>
+        <bits>8</bits>
+      </pin>
+      <pin name="sig_CGMII_TX_DATA" origin="default">
+        <username>sig_CGMII_TX_DATA</username>
+        <bits>64</bits>
+      </pin>
+      <pin name="sig_CGMII_RXC" origin="default">
+        <username>sig_CGMII_RXC</username>
+        <bits>8</bits>
+      </pin>
+      <pin name="sig_CGMII_RX_DATA" origin="default">
+        <username>sig_CGMII_RX_DATA</username>
+        <bits>64</bits>
+      </pin>
+      <pin name="sig_CGMII_TX_CLK" origin="default">
+        <username>sig_CGMII_TX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_CGMII_RX_CLK" origin="default">
+        <username>sig_CGMII_RX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD0" origin="default">
+        <username>sig_100GBASER_RXD0</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD1" origin="default">
+        <username>sig_100GBASER_RXD1</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD2" origin="default">
+        <username>sig_100GBASER_RXD2</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD3" origin="default">
+        <username>sig_100GBASER_RXD3</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD4" origin="default">
+        <username>sig_100GBASER_RXD4</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD5" origin="default">
+        <username>sig_100GBASER_RXD5</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD6" origin="default">
+        <username>sig_100GBASER_RXD6</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD7" origin="default">
+        <username>sig_100GBASER_RXD7</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD8" origin="default">
+        <username>sig_100GBASER_RXD8</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD9" origin="default">
+        <username>sig_100GBASER_RXD9</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD10" origin="default">
+        <username>sig_100GBASER_RXD10</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD11" origin="default">
+        <username>sig_100GBASER_RXD11</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD12" origin="default">
+        <username>sig_100GBASER_RXD12</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD13" origin="default">
+        <username>sig_100GBASER_RXD13</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD14" origin="default">
+        <username>sig_100GBASER_RXD14</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD15" origin="default">
+        <username>sig_100GBASER_RXD15</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD16" origin="default">
+        <username>sig_100GBASER_RXD16</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD17" origin="default">
+        <username>sig_100GBASER_RXD17</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD18" origin="default">
+        <username>sig_100GBASER_RXD18</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD19" origin="default">
+        <username>sig_100GBASER_RXD19</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD0" origin="default">
+        <username>sig_100GBASER_TXD0</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD1" origin="default">
+        <username>sig_100GBASER_TXD1</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD2" origin="default">
+        <username>sig_100GBASER_TXD2</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD3" origin="default">
+        <username>sig_100GBASER_TXD3</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD4" origin="default">
+        <username>sig_100GBASER_TXD4</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD5" origin="default">
+        <username>sig_100GBASER_TXD5</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD6" origin="default">
+        <username>sig_100GBASER_TXD6</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD7" origin="default">
+        <username>sig_100GBASER_TXD7</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD8" origin="default">
+        <username>sig_100GBASER_TXD8</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD9" origin="default">
+        <username>sig_100GBASER_TXD9</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD10" origin="default">
+        <username>sig_100GBASER_TXD10</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD11" origin="default">
+        <username>sig_100GBASER_TXD11</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD12" origin="default">
+        <username>sig_100GBASER_TXD12</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD13" origin="default">
+        <username>sig_100GBASER_TXD13</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD14" origin="default">
+        <username>sig_100GBASER_TXD14</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD15" origin="default">
+        <username>sig_100GBASER_TXD15</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD16" origin="default">
+        <username>sig_100GBASER_TXD16</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD17" origin="default">
+        <username>sig_100GBASER_TXD17</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD18" origin="default">
+        <username>sig_100GBASER_TXD18</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD19" origin="default">
+        <username>sig_100GBASER_TXD19</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_P0" origin="default">
+        <username>sig_100GBASER_RXD_P0</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_P1" origin="default">
+        <username>sig_100GBASER_RXD_P1</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_P2" origin="default">
+        <username>sig_100GBASER_RXD_P2</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_P3" origin="default">
+        <username>sig_100GBASER_RXD_P3</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_P4" origin="default">
+        <username>sig_100GBASER_RXD_P4</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_P5" origin="default">
+        <username>sig_100GBASER_RXD_P5</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_P6" origin="default">
+        <username>sig_100GBASER_RXD_P6</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_P7" origin="default">
+        <username>sig_100GBASER_RXD_P7</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_P8" origin="default">
+        <username>sig_100GBASER_RXD_P8</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_P9" origin="default">
+        <username>sig_100GBASER_RXD_P9</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_N0" origin="default">
+        <username>sig_100GBASER_RXD_N0</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_N1" origin="default">
+        <username>sig_100GBASER_RXD_N1</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_N2" origin="default">
+        <username>sig_100GBASER_RXD_N2</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_N3" origin="default">
+        <username>sig_100GBASER_RXD_N3</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_N4" origin="default">
+        <username>sig_100GBASER_RXD_N4</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_N5" origin="default">
+        <username>sig_100GBASER_RXD_N5</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_N6" origin="default">
+        <username>sig_100GBASER_RXD_N6</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_N7" origin="default">
+        <username>sig_100GBASER_RXD_N7</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_N8" origin="default">
+        <username>sig_100GBASER_RXD_N8</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_RXD_N9" origin="default">
+        <username>sig_100GBASER_RXD_N9</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_P0" origin="default">
+        <username>sig_100GBASER_TXD_P0</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_P1" origin="default">
+        <username>sig_100GBASER_TXD_P1</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_P2" origin="default">
+        <username>sig_100GBASER_TXD_P2</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_P3" origin="default">
+        <username>sig_100GBASER_TXD_P3</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_P4" origin="default">
+        <username>sig_100GBASER_TXD_P4</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_P5" origin="default">
+        <username>sig_100GBASER_TXD_P5</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_P6" origin="default">
+        <username>sig_100GBASER_TXD_P6</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_P7" origin="default">
+        <username>sig_100GBASER_TXD_P7</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_P8" origin="default">
+        <username>sig_100GBASER_TXD_P8</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_P9" origin="default">
+        <username>sig_100GBASER_TXD_P9</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_N0" origin="default">
+        <username>sig_100GBASER_TXD_N0</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_N1" origin="default">
+        <username>sig_100GBASER_TXD_N1</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_N2" origin="default">
+        <username>sig_100GBASER_TXD_N2</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_N3" origin="default">
+        <username>sig_100GBASER_TXD_N3</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_N4" origin="default">
+        <username>sig_100GBASER_TXD_N4</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_N5" origin="default">
+        <username>sig_100GBASER_TXD_N5</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_N6" origin="default">
+        <username>sig_100GBASER_TXD_N6</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_N7" origin="default">
+        <username>sig_100GBASER_TXD_N7</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_N8" origin="default">
+        <username>sig_100GBASER_TXD_N8</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_TXD_N9" origin="default">
+        <username>sig_100GBASER_TXD_N9</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_SIGNAL_INDICATE" origin="default">
+        <username>sig_100GBASER_SIGNAL_INDICATE</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_PCS_R_STATUS" origin="default">
+        <username>sig_100GBASER_PCS_R_STATUS</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK0" origin="default">
+        <username>sig_PMA_RX_CLK0</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK1" origin="default">
+        <username>sig_PMA_RX_CLK1</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK2" origin="default">
+        <username>sig_PMA_RX_CLK2</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK3" origin="default">
+        <username>sig_PMA_RX_CLK3</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK4" origin="default">
+        <username>sig_PMA_RX_CLK4</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK5" origin="default">
+        <username>sig_PMA_RX_CLK5</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK6" origin="default">
+        <username>sig_PMA_RX_CLK6</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK7" origin="default">
+        <username>sig_PMA_RX_CLK7</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK8" origin="default">
+        <username>sig_PMA_RX_CLK8</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK9" origin="default">
+        <username>sig_PMA_RX_CLK9</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK10" origin="default">
+        <username>sig_PMA_RX_CLK10</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK11" origin="default">
+        <username>sig_PMA_RX_CLK11</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK12" origin="default">
+        <username>sig_PMA_RX_CLK12</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK13" origin="default">
+        <username>sig_PMA_RX_CLK13</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK14" origin="default">
+        <username>sig_PMA_RX_CLK14</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK15" origin="default">
+        <username>sig_PMA_RX_CLK15</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK16" origin="default">
+        <username>sig_PMA_RX_CLK16</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK17" origin="default">
+        <username>sig_PMA_RX_CLK17</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK18" origin="default">
+        <username>sig_PMA_RX_CLK18</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_RX_CLK19" origin="default">
+        <username>sig_PMA_RX_CLK19</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK0" origin="default">
+        <username>sig_PMA_TX_CLK0</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK1" origin="default">
+        <username>sig_PMA_TX_CLK1</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK2" origin="default">
+        <username>sig_PMA_TX_CLK2</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK3" origin="default">
+        <username>sig_PMA_TX_CLK3</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK4" origin="default">
+        <username>sig_PMA_TX_CLK4</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK5" origin="default">
+        <username>sig_PMA_TX_CLK5</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK6" origin="default">
+        <username>sig_PMA_TX_CLK6</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK7" origin="default">
+        <username>sig_PMA_TX_CLK7</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK8" origin="default">
+        <username>sig_PMA_TX_CLK8</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK9" origin="default">
+        <username>sig_PMA_TX_CLK9</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK10" origin="default">
+        <username>sig_PMA_TX_CLK10</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK11" origin="default">
+        <username>sig_PMA_TX_CLK11</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK12" origin="default">
+        <username>sig_PMA_TX_CLK12</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK13" origin="default">
+        <username>sig_PMA_TX_CLK13</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK14" origin="default">
+        <username>sig_PMA_TX_CLK14</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK15" origin="default">
+        <username>sig_PMA_TX_CLK15</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK16" origin="default">
+        <username>sig_PMA_TX_CLK16</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK17" origin="default">
+        <username>sig_PMA_TX_CLK17</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK18" origin="default">
+        <username>sig_PMA_TX_CLK18</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_PMA_TX_CLK19" origin="default">
+        <username>sig_PMA_TX_CLK19</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_SIGNAL_DETECT" origin="default">
+        <username>sig_SIGNAL_DETECT</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_ENERGY_DETECT" origin="default">
+        <username>sig_ENERGY_DETECT</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_DECODER_NEXT_IN" origin="default">
+        <username>sig_100GBASER_DECODER_NEXT_IN</username>
+        <bits>66</bits>
+      </pin>
+      <pin name="sig_100GBASER_lane_no" origin="default">
+        <username>sig_100GBASER_lane_no</username>
+        <bits>20</bits>
+      </pin>
+      <pin name="sig_100GBASER_TX_OR_RX" origin="default">
+        <username>sig_100GBASER_TX_OR_RX</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_100GBASER_start_forcing" origin="default">
+        <username>sig_100GBASER_start_forcing</username>
+        <bits>1</bits>
+      </pin>
+      <feature name="AcceleratedMode" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="reset_through_pin" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="reserved_sequence_order_set_pattern" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="prbs_data_0_l_f" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="prbs_seed_A" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="prbs_seed_B" origin="default">
+        <value>2</value>
+      </feature>
+      <feature name="test_pattern_error_en" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="test_pattern_num_error" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="test_pattern_error_high_index_val" origin="default">
+        <value>3</value>
+      </feature>
+      <feature name="has_prbs9_test_pattern_ability" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="prbs9_receive_test_pattern_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="prbs9_transmit_test_pattern_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lpi_rx_clk_resume_offset" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="lpi_tx_clk_resume_offset" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_ptp_mode" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_ptp_mode_IEEE_802_1_AS" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="vr_enet_ptp_mode_IEEE_1588" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="magic_pattern_ieee_addr_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="magic_pattern_ieee_addr" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="rgmii_drive_bw_fall_rise" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="rgmii_delayed_clock_data_collect" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="tx_collector_enable" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="rx_collector_enable" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="custom_crc_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="number_of_xmii_ports" origin="default">
+        <value>4</value>
+      </feature>
+      <feature name="qsgmii_port_duplexities" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="qsgmii_port_duplexities_0" origin="default">
+        <value>FULL</value>
+      </feature>
+      <feature name="qsgmii_port_duplexities_1" origin="default">
+        <value>FULL</value>
+      </feature>
+      <feature name="qsgmii_port_duplexities_2" origin="default">
+        <value>FULL</value>
+      </feature>
+      <feature name="qsgmii_port_duplexities_3" origin="default">
+        <value>FULL</value>
+      </feature>
+      <feature name="mac_sec_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="mac_sec_vlan_tag_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="mac_sec_icv_length" origin="default">
+        <value>8</value>
+      </feature>
+      <feature name="crc_length" origin="default">
+        <value>4</value>
+      </feature>
+      <feature name="no_preamble" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="disable_upper_layer_extraction" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="proprietary_header_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="proprietary_header_size" origin="default">
+        <value>12</value>
+      </feature>
+      <feature name="proprietary_header_location" origin="default">
+        <value>12</value>
+      </feature>
+      <feature name="use_proprietary_header_in_crc" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="packet_tracker_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="custom_vlan_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="num_of_custom_vlan_tag" origin="default">
+        <value>4</value>
+      </feature>
+      <feature name="custom_vlan_size" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="custom_vlan_size_0" origin="default">
+        <value>4</value>
+      </feature>
+      <feature name="custom_vlan_size_1" origin="default">
+        <value>4</value>
+      </feature>
+      <feature name="custom_vlan_size_2" origin="default">
+        <value>4</value>
+      </feature>
+      <feature name="custom_vlan_size_3" origin="default">
+        <value>4</value>
+      </feature>
+      <feature name="custom_vlan_size_4" origin="default">
+        <value>4</value>
+      </feature>
+      <feature name="custom_vlan_size_5" origin="default">
+        <value>4</value>
+      </feature>
+      <feature name="custom_vlan_size_6" origin="default">
+        <value>4</value>
+      </feature>
+      <feature name="custom_vlan_size_7" origin="default">
+        <value>4</value>
+      </feature>
+      <feature name="custom_vlan_id" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="custom_vlan_id_0" origin="default">
+        <value>33024</value>
+      </feature>
+      <feature name="custom_vlan_id_1" origin="default">
+        <value>33024</value>
+      </feature>
+      <feature name="custom_vlan_id_2" origin="default">
+        <value>33024</value>
+      </feature>
+      <feature name="custom_vlan_id_3" origin="default">
+        <value>33024</value>
+      </feature>
+      <feature name="custom_vlan_id_4" origin="default">
+        <value>33024</value>
+      </feature>
+      <feature name="custom_vlan_id_5" origin="default">
+        <value>33024</value>
+      </feature>
+      <feature name="custom_vlan_id_6" origin="default">
+        <value>33024</value>
+      </feature>
+      <feature name="custom_vlan_id_7" origin="default">
+        <value>33024</value>
+      </feature>
+      <feature name="lane_wise_clock" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="wait_time" origin="default">
+        <value>100</value>
+      </feature>
+      <feature name="ptp_version" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="ptp_version_PTP_V1" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="ptp_version_PTP_V2" origin="default">
+        <value>1</value>
+      </feature>
+      <feature name="jam_pattern" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="jam_pattern_0" origin="default">
+        <value>242</value>
+      </feature>
+      <feature name="jam_pattern_1" origin="default">
+        <value>242</value>
+      </feature>
+      <feature name="jam_pattern_2" origin="default">
+        <value>242</value>
+      </feature>
+      <feature name="jam_pattern_3" origin="default">
+        <value>242</value>
+      </feature>
+      <feature name="jam_pattern_4" origin="default">
+        <value>242</value>
+      </feature>
+      <feature name="jam_pattern_5" origin="default">
+        <value>242</value>
+      </feature>
+      <feature name="interface_kind_RXAUI" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_kind_QSGMII" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="speed_mode_SPEED_MODE_20GBPS" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="interface_width_PMA_20BIT_BUS_WIDTH_INTERFACE" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="pma_bus_width_one" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="scbd_config" origin="user">
+        <value>1</value>
+      </feature>
+      <feature name="scbd_config_SWITCH" origin="user">
+        <value>0</value>
+      </feature>
+      <feature name="scbd_config_REPEATER" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="scbd_config_SINGLE_OR_MULTI_PORT" origin="user">
+        <value>1</value>
+      </feature>
+      <feature name="scbd_config_USER_DEFINED" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="qsgmii_port_speeds" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="qsgmii_port_speeds_0" origin="default">
+        <value>SPEED_MODE_1GBPS</value>
+      </feature>
+      <feature name="qsgmii_port_speeds_1" origin="default">
+        <value>SPEED_MODE_1GBPS</value>
+      </feature>
+      <feature name="qsgmii_port_speeds_2" origin="default">
+        <value>SPEED_MODE_1GBPS</value>
+      </feature>
+      <feature name="qsgmii_port_speeds_3" origin="default">
+        <value>SPEED_MODE_1GBPS</value>
+      </feature>
+      <feature name="debug_enable" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="high_perf_mode" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="perform_cl73_an" origin="default">
+        <value>0</value>
+      </feature>
+      <feature name="cl73_an_physical_link_number" origin="default">
+        <value>0</value>
+      </feature>
+      <pin name="sig_TENGKR_PARALLEL_RX_CLK" origin="default">
+        <username>sig_TENGKR_PARALLEL_RX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKR_PARALLEL_TX_CLK" origin="default">
+        <username>sig_TENGKR_PARALLEL_TX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_DISABLE_SERDES" origin="default">
+        <username>sig_DISABLE_SERDES</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX_CLK_0" origin="default">
+        <username>sig_TENGKX4_TX_CLK_0</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX_CLK_1" origin="default">
+        <username>sig_TENGKX4_TX_CLK_1</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX_CLK_2" origin="default">
+        <username>sig_TENGKX4_TX_CLK_2</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_TX_CLK_3" origin="default">
+        <username>sig_TENGKX4_TX_CLK_3</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX_CLK_0" origin="default">
+        <username>sig_TENGKX4_RX_CLK_0</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX_CLK_1" origin="default">
+        <username>sig_TENGKX4_RX_CLK_1</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX_CLK_2" origin="default">
+        <username>sig_TENGKX4_RX_CLK_2</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_TENGKX4_RX_CLK_3" origin="default">
+        <username>sig_TENGKX4_RX_CLK_3</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RXAUI_TX_CLK" origin="default">
+        <username>sig_RXAUI_TX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RXAUI_RX_CLK" origin="default">
+        <username>sig_RXAUI_RX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RXAUI_TX0_P" origin="default">
+        <username>sig_RXAUI_TX0_P</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RXAUI_TX0_N" origin="default">
+        <username>sig_RXAUI_TX0_N</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RXAUI_TX1_P" origin="default">
+        <username>sig_RXAUI_TX1_P</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RXAUI_TX1_N" origin="default">
+        <username>sig_RXAUI_TX1_N</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RXAUI_RX0_P" origin="default">
+        <username>sig_RXAUI_RX0_P</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RXAUI_RX0_N" origin="default">
+        <username>sig_RXAUI_RX0_N</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RXAUI_RX1_P" origin="default">
+        <username>sig_RXAUI_RX1_P</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RXAUI_RX1_N" origin="default">
+        <username>sig_RXAUI_RX1_N</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_RXAUI_TX0_CODE" origin="default">
+        <username>sig_RXAUI_TX0_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_RXAUI_TX1_CODE" origin="default">
+        <username>sig_RXAUI_TX1_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_RXAUI_RX0_CODE" origin="default">
+        <username>sig_RXAUI_RX0_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_RXAUI_RX1_CODE" origin="default">
+        <username>sig_RXAUI_RX1_CODE</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_RXAUI_TX0_CODE_20BIT" origin="default">
+        <username>sig_RXAUI_TX0_CODE_20BIT</username>
+        <bits>20</bits>
+      </pin>
+      <pin name="sig_RXAUI_TX1_CODE_20BIT" origin="default">
+        <username>sig_RXAUI_TX1_CODE_20BIT</username>
+        <bits>20</bits>
+      </pin>
+      <pin name="sig_RXAUI_RX0_CODE_20BIT" origin="default">
+        <username>sig_RXAUI_RX0_CODE_20BIT</username>
+        <bits>20</bits>
+      </pin>
+      <pin name="sig_RXAUI_RX1_CODE_20BIT" origin="default">
+        <username>sig_RXAUI_RX1_CODE_20BIT</username>
+        <bits>20</bits>
+      </pin>
+      <pin name="sig_RXAUI_SIGNAL_DETECT" origin="default">
+        <username>sig_RXAUI_SIGNAL_DETECT</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_QSGMII_TXD" origin="default">
+        <username>sig_QSGMII_TXD</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_QSGMII_RXD" origin="default">
+        <username>sig_QSGMII_RXD</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_QSGMII_TBI_TXD" origin="default">
+        <username>sig_QSGMII_TBI_TXD</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_QSGMII_TBI_RXD" origin="default">
+        <username>sig_QSGMII_TBI_RXD</username>
+        <bits>10</bits>
+      </pin>
+      <pin name="sig_QSGMII_SERIAL_TX_CLK" origin="default">
+        <username>sig_QSGMII_SERIAL_TX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_QSGMII_SERIAL_RX_CLK" origin="default">
+        <username>sig_QSGMII_SERIAL_RX_CLK</username>
+        <bits>1</bits>
+      </pin>
+      <pin name="sig_QSGMII_SIGNAL_DETECT" origin="default">
+        <username>sig_QSGMII_SIGNAL_DETECT</username>
+        <bits>1</bits>
+      </pin>
+    </functionality>
+    <timing>
+      <timing.set default="yes" name="default">
+        <timing.parm name="dynamic_skew" origin="default">
+          <value>4 ns</value>
+        </timing.parm>
+        <timing.parm name="static_skew" origin="default">
+          <value>180 ns</value>
+        </timing.parm>
+        <timing.parm name="max_wait_timer" origin="default">
+          <value>500 ms</value>
+        </timing.parm>
+        <timing.parm name="rgmii_data_delay" origin="default">
+          <value>0 ns</value>
+        </timing.parm>
+        <timing.parm name="rx_resolved_timer" origin="default">
+          <value>400 us</value>
+        </timing.parm>
+        <timing.parm name="tx_resolved_timer" origin="default">
+          <value>400 us</value>
+        </timing.parm>
+        <timing.parm name="one_clk_time" origin="default">
+          <value>40 ns</value>
+        </timing.parm>
+        <timing.parm name="min_cycle" origin="default">
+          <value>35 ns</value>
+        </timing.parm>
+        <timing.parm name="max_cycle" origin="default">
+          <value>45 ns</value>
+        </timing.parm>
+        <timing.parm name="mgmt_half_clk_time" origin="default">
+          <value>200 ns</value>
+        </timing.parm>
+        <timing.parm name="rgmii_link_down_to_speed_change_timer" origin="default">
+          <value>0 ns</value>
+        </timing.parm>
+        <timing.parm name="rgmii_speed_change_to_link_up_timer" origin="default">
+          <value>0 ns</value>
+        </timing.parm>
+      </timing.set>
+    </timing>
+  </part>
+</soma>
+
